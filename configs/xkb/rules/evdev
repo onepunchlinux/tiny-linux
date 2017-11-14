@@ -1,0 +1,2 @@
+! model	=	keycodes	geometry	symbols		compat		types
+  *	=	evdev		pc(104)		pc+us		complete	complete
