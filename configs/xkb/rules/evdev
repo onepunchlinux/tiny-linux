@@ -1,2 +1,2 @@
-! model	=	keycodes	geometry	symbols		compat		types
-  *	=	evdev		pc(104)		pc+us		complete	complete
+! model		layout		=	symbols		geometry 	keycodes	compat		types
+  *		*		=	tiny		pc(pc104)	evdev		complete	complete
