@@ -149,6 +149,12 @@ xkb_symbols "simple" {
     key <CAPS> { [Super_L] };
     key <KP1>  { [Super_L] };
 
+    key <VOL+> { [XF86AudioRaiseVolume] };
+    key <VOL-> { [XF86AudioLowerVolume] };
+    key <MUTE> { [XF86AudioMute] };
+    key <I232> { [XF86MonBrightnessUp] };
+    key <I233> { [XF86MonBrightnessDown] };
+
     replace key <LWIN>  { [Control_L, Control_L]};
     replace key <LALT>  { [Control_R, Control_R]};
     key <LCTL>  { [ISO_Level3_Shift] };
