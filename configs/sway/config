@@ -21,7 +21,7 @@ set $menu dmenu_run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/.config/sway/background.png fill
 output eDP-1 scale 2
 #
 # Example configuration:
@@ -34,13 +34,12 @@ output eDP-1 scale 2
 #
 # Example configuration:
 #
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+    dwt enabled
+    tap enabled
+    middle_emulation enabled
+}
+
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
@@ -180,9 +179,14 @@ bar {
     position top
     colors {
         statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        background #222222
+        focused_workspace #a4a4a4 #a4a4a4 #111111
+        active_workspace #a4a4a4 #a4a4a4 #111111
+        inactive_workspace #323232 #323232 #828282
+	separator #323232
     }
+    status_command "i3status -c ~/.config/i3/i3status.conf"
+    font pango:DejaVu Sans Mono 8, Awesome 8
 }
 
 include /etc/sway/config.d/*
