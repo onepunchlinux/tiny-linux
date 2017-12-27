@@ -189,6 +189,9 @@ bar {
     font pango:DejaVu Sans Mono 8, Awesome 8
 }
 
+border pixel 1
+new_window pixel
+
 include /etc/sway/config.d/*
 
 exec xrdb ~/.Xresources
