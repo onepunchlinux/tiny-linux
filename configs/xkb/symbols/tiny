@@ -24,7 +24,7 @@ xkb_symbols "basic" {
     key <LCTL> {	[ Control_L		]	};
     key <LWIN> {	[ Super_L		]	};
 
-    key <RTSH> {	[ Shift_R		]	};
+    key <RTSH> {	[ grave, asciitilde	]	};
     key <RCTL> {	[ Control_R		]	};
     key <RWIN> {	[ Super_R		]	};
     key <MENU> {	[ Menu			]	};
@@ -94,7 +94,7 @@ xkb_symbols "simple" {
 
     name[Group1]= "English (US)";
 
-    key <TLDE> {	[     grave,	asciitilde	]	};
+    key <TLDE> {	[         Escape		]	};
     key <AE01> {	[	  1,	exclam 		]	};
     key <AE02> {	[	  2,	at		]	};
     key <AE03> {	[	  3,	numbersign	]	};
