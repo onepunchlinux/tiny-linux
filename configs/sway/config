@@ -126,6 +126,7 @@ bar {
 }
 
 new_window pixel
+seamless_mouse on
 
 exec xrdb ~/.Xresources
 
