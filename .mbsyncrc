@@ -1,0 +1,46 @@
+Create Both
+Expunge Both
+SyncState *
+Sync All
+
+IMAPAccount whitehead1415
+Host imap.gmail.com
+User whitehead1415@gmail.com
+PassCmd "gpg2 -q -for-your-eyes-only --no-tty -d ~/.whitehead1415.passwd.gpg"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+AuthMech Login
+
+IMAPStore whitehead1415-remote
+Account whitehead1415
+
+MaildirStore whitehead1415-local
+Path ~/.mail/whitehead1415/
+Inbox ~/.mail/whitehead1415/inbox
+
+Channel whitehead1415-inbox
+Master ":whitehead1415-remote:INBOX"
+Slave ":whitehead1415-local:inbox"
+
+Channel whitehead1415-sent
+Master ":whitehead1415-remote:[Gmail]/Sent Mail"
+Slave ":whitehead1415-local:sent"
+
+Channel whitehead1415-trash
+Master ":whitehead1415-remote:[Gmail]/Trash"
+Slave ":whitehead1415-local:trash"
+
+Channel whitehead1415-archive
+Master ":whitehead1415-remote:[Gmail]/All Mail"
+Slave ":whitehead1415-local:archive"
+
+Channel whitehead1415-drafts
+Master ":whitehead1415-remote:[Gmail]/Drafts"
+Slave ":whitehead1415-local:drafts"
+
+group whitehead1415
+Channel whitehead1415-inbox
+Channel whitehead1415-sent
+Channel whitehead1415-trash
+Channel whitehead1415-archive
+Channel whitehead1415-drafts
